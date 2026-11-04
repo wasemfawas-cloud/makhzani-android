@@ -27,7 +27,7 @@ jobs:
 
       - name: Extract project
         run: |
-          unzip -o Makhzani-Android-Project-OUTGOING-DATE-PDF-1.zip -d extracted
+          unzip -o Makhzani-Android-Project-OUTGOING-DATE-PDF.zip -d extracted
 
       - name: Build APK
         run: gradle -p extracted assembleDebug
