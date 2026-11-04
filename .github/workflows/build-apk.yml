@@ -27,13 +27,13 @@ jobs:
 
       - name: Extract project
         run: |
-          unzip -o Makhzani-Android-Project-OUTGOING-DATE-PDF.zip -d extracted
+          unzip -o Makhzani-Android-Project-v8-VERIFIED.zip -d extracted
 
       - name: Build APK
-        run: gradle -p extracted assembleDebug
+        run: gradle -p extracted/m4 assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Makhzani-APK
-          path: extracted/app/build/outputs/apk/debug/app-debug.apk
+          path:  extracted/m4/app/build/outputs/apk/debug/app-debug.apk
